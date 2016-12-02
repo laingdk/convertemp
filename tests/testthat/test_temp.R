@@ -48,3 +48,18 @@ test_that("output doesn't go below absolute zero", {
   expect_warning(kelvin_to_fahr(-1), "This temperature is below absolute zero.")
   expect_warning(celsius_to_fahr(-300), "This temperature is below absolute zero.")
 })
+
+test_that("input is a single number", {
+  expect_error(fahr_to_kelvin("a"), "The input must be a single number.")
+  expect_error(fahr_to_kelvin(c(1, 2)), "The input must be a single number.")
+  expect_error(celsius_to_kelvin("a"), "The input must be a single number.")
+  expect_error(celsius_to_kelvin(c(1, 2)), "The input must be a single number.")
+  expect_error(kelvin_to_celsius("a"), "The input must be a single number.")
+  expect_error(kelvin_to_celsius(c(1,2)), "The input must be a single number.")
+  expect_error(fahr_to_celsius("a"), "The input must be a single number.")
+  expect_error(fahr_to_celsius(c(1,2)), "The input must be a single number.")
+  expect_error(kelvin_to_fahr("a"), "The input must be a single number.")
+  expect_error(kelvin_to_fahr(c(1,2)), "The input must be a single number.")
+  expect_error(celsius_to_fahr("a"), "The input must be a single number.")
+  expect_error(celsius_to_fahr(c(1,2)), "The input must be a single number.")
+})

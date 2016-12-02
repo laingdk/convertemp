@@ -9,6 +9,9 @@
 #' @examples
 #' fahr_to_kelvin(32)
 fahr_to_kelvin <- function(temp) {
+  if (typeof(temp) != "double" & typeof(temp) != "integer" | length(temp) != 1) {
+    stop("The input must be a single number.")
+  }
   if (temp<(-459.67)){
     warning("This temperature is below absolute zero.")
   }
@@ -27,6 +30,9 @@ fahr_to_kelvin <- function(temp) {
 #' @examples
 #' kelvin_to_celsius(273.15)
 kelvin_to_celsius <- function(temp) {
+  if (typeof(temp) != "double" & typeof(temp) != "integer" | length(temp) != 1) {
+    stop("The input must be a single number.")
+  }
   if (temp<0){
     warning("This temperature is below absolute zero.")
   }
@@ -45,6 +51,9 @@ kelvin_to_celsius <- function(temp) {
 #' @examples
 #' celsius_to_fahr(0)
 celsius_to_fahr <- function(temp) {
+  if (typeof(temp) != "double" & typeof(temp) != "integer" | length(temp) != 1) {
+    stop("The input must be a single number.")
+  }
   if (temp<(-273.15)){
     warning("This temperature is below absolute zero.")
   }
@@ -63,6 +72,9 @@ celsius_to_fahr <- function(temp) {
 #' @examples
 #' fahr_to_celsius(32)
 fahr_to_celsius <- function(temp) {
+  if (typeof(temp) != "double" & typeof(temp) != "integer" | length(temp) != 1) {
+    stop("The input must be a single number.")
+  }
   if (temp<(-459.67)){
     warning("This temperature is below absolute zero.")
   }
@@ -82,6 +94,9 @@ fahr_to_celsius <- function(temp) {
 #' @examples
 #' kelvin_to_fahr(273.15)
 kelvin_to_fahr <- function(temp) {
+  if (typeof(temp) != "double" & typeof(temp) != "integer" | length(temp) != 1) {
+    stop("The input must be a single number.")
+  }
   if (temp<0){
     warning("This temperature is below absolute zero.")
   }
@@ -101,6 +116,9 @@ kelvin_to_fahr <- function(temp) {
 #' @examples
 #' celsius_to_kelvin(0)
 celsius_to_kelvin <- function(temp) {
+  if (typeof(temp) != "double" & typeof(temp) != "integer" | length(temp) != 1) {
+    stop("The input must be a single number.")
+  }
   if (temp<(-273.15)){
     warning("This temperature is below absolute zero.")
   }
